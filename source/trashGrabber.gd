@@ -14,15 +14,14 @@ func _process(delta):
 			velocity.y = -500
 		elif Input.is_action_pressed("s"):
 			velocity.y = 500
-		elif Input.is_action_pressed("a"):
-			velocity.x = -500
+		else:
 			velocity.y = 0
+		if Input.is_action_pressed("a"):
+			velocity.x = -500
 		elif Input.is_action_pressed("d"):
 			velocity.x =500
-			velocity.y = 0
 		else:
 			velocity.x = 0
-			velocity.y = 0
 		move_and_slide()
 func cleanedTrash():
 	trashcleaned += 1
